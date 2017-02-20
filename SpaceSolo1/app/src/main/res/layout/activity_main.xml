@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#606060"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="spacesolo.info.dicj.spacesolo1.MainActivity"
+    >
+
+    <RelativeLayout
+        android:id="@+id/RL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/IMV1"
+            android:layout_width="fill_parent"
+            android:layout_height="140dp"
+            android:src="@drawable/spaceship"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/RL2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RL1">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"></View>
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:id="@+id/LL1"
+            android:layout_width="wrap_content"
+            android:layout_height="145dp"
+            android:layout_below="@id/view1"
+            >
+
+            <RelativeLayout
+                android:id="@+id/RL1inLL1"
+                android:layout_width="158dp"
+                android:layout_height="145dp"
+                android:background="@drawable/wall"
+                android:layout_marginRight="5dp">
+
+                <TextView
+                    android:id="@+id/TVbtn1"
+                    android:layout_width="125dp"
+                    android:layout_height="25dp"
+                    android:textColor="#FF0000"
+                    android:textSize="20dp"
+                    android:text="@string/hyperspace"
+                    android:background="#D7D7D7"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/darkredbutton"
+                    android:layout_below="@id/TVbtn1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RL2inLL1"
+                android:layout_width="157dp"
+                android:layout_height="145dp"
+                android:background="@drawable/wall"
+                android:layout_marginLeft="5dp">
+
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+        <View
+            android:id="@+id/view2"
+            android:layout_below="@id/LL1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"></View>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:id="@+id/LL2"
+            android:layout_width="wrap_content"
+            android:layout_height="145dp"
+            android:layout_below="@id/view2">
+
+            <ImageView
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/wall2"
+                android:layout_marginRight="5dp"
+                />
+
+            <ImageView
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/wall2"
+                android:layout_marginLeft="5dp"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
