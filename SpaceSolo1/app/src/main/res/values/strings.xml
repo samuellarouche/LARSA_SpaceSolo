@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SpaceSolo1</string>
     <string name="hyperspace">Hyper Espace</string>
+    <string name="IDK">\????????</string>
     <string name="fuckyou">Fuck You</string>
 
 </resources>

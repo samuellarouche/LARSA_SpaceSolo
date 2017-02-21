@@ -17,7 +17,13 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Fuck You", Toast.LENGTH_SHORT).show();
+
+        Button button = (Button) findViewById(R.id.btn2);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Fuck You", Toast.LENGTH_SHORT).show();
             }
         });
     }
 }
+   

@@ -61,14 +61,14 @@
                     android:layout_marginLeft="15dp"/>
 
                 <Button
-                    android:id="@+id/btn1"
-                    android:layout_width="120dp"
-                    android:layout_height="80dp"
-                    android:background="@drawable/darkredbutton"
-                    android:layout_below="@id/TVbtn1"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="20dp"
-                    />
+                android:id="@+id/btn1"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:background="@drawable/darkredbutton"
+                android:layout_below="@id/TVbtn1"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                />
 
 
             </RelativeLayout>
@@ -101,23 +101,48 @@
             android:layout_height="145dp"
             android:layout_below="@id/view2">
 
-            <ImageView
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+            <RelativeLayout
+                android:id="@+id/RL1inLL2"
+                android:layout_width="157dp"
+                android:layout_height="145dp"
                 android:background="@drawable/wall2"
-                android:layout_marginRight="5dp"
-                />
+                android:layout_marginRight="5dp">
 
-            <ImageView
-                android:id="@+id/button4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RL2inLL2"
+                android:layout_width="157dp"
+                android:layout_height="145dp"
                 android:background="@drawable/wall2"
-                android:layout_marginLeft="5dp"
-                />
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:id="@+id/TVbtn2"
+                    android:layout_width="125dp"
+                    android:layout_height="25dp"
+                    android:textColor="#FF0000"
+                    android:textSize="20dp"
+                    android:text="@string/IDK"
+                    android:textAlignment="center"
+                    android:background="#D7D7D7"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"/>
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/darkredbutton"
+                    android:layout_below="@id/TVbtn2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    />
+            </RelativeLayout>
+
+
         </LinearLayout>
 
         <RelativeLayout
