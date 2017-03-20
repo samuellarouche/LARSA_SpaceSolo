@@ -20,6 +20,16 @@
             android:layout_width="fill_parent"
             android:layout_height="140dp"
             android:src="@drawable/spaceship"/>
+
+        <ProgressBar
+            android:id="@+id/ProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:max="10"
+            android:progress="0"
+            android:layout_alignBottom="@id/IMV1"
+            />
     </RelativeLayout>
 
 
@@ -60,7 +70,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="15dp"/>
 
-                <Button
+                <ImageButton
                 android:id="@+id/btn1"
                 android:layout_width="120dp"
                 android:layout_height="80dp"
@@ -108,7 +118,27 @@
                 android:background="@drawable/wall2"
                 android:layout_marginRight="5dp">
 
+                <TextView
+                    android:id="@+id/TVbtn3"
+                    android:layout_width="125dp"
+                    android:layout_height="25dp"
+                    android:textColor="#FF0000"
+                    android:textSize="20dp"
+                    android:text="@string/IDK"
+                    android:textAlignment="center"
+                    android:background="#D7D7D7"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"/>
 
+                <ImageButton
+                    android:id="@+id/btn3"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/interupteur"
+                    android:layout_below="@id/TVbtn3"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    />
 
             </RelativeLayout>
 
@@ -131,7 +161,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginLeft="15dp"/>
 
-                <Button
+                <ImageButton
                     android:id="@+id/btn2"
                     android:layout_width="120dp"
                     android:layout_height="80dp"
@@ -147,8 +177,8 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:layout_height="match_parent"
+            >
 
         </RelativeLayout>
 
