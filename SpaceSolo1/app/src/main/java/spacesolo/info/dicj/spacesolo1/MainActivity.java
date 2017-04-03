@@ -15,11 +15,20 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
+import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
 public class MainActivity extends AppCompatActivity {
     CountDownTimer countdowntimer;
+    int cptBtn1 = 0;
     int cptBtn2 = 0;
+    int cptBtn3 = 0;
+    int cptBtn4 = 0;
+    public boolean btn1onoff = false;
+    int epreuveChoisi = 0;
+    Random rndEpreuve = new Random();
+
+
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -32,8 +41,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final ProgressBar progbar = (ProgressBar) findViewById(R.id.ProgressBar);
+        int rndEp = rndEpreuve.nextInt(4)+1;
+        epreuveChoisi = spacesolo.info.dicj.spacesolo1.epreuve.choixEpreuve(rndEp);
 
-        countdowntimer = new CountDownTimer(10000, 10) {
+        countdowntimer = new CountDownTimer(10000,1000) {
 
             public void onTick(long millisUntilFinished) {
                 int progress = (int) (millisUntilFinished/1000);
@@ -43,16 +54,29 @@ public class MainActivity extends AppCompatActivity {
 
             public void onFinish() {
                 Toast.makeText(MainActivity.this, "Count Down Finish", Toast.LENGTH_SHORT).show();
+                countdowntimer.cancel();
+                progbar.setProgress(0);
+                countdowntimer.start();
             }
         }.start();
 
 
-        ImageButton button = (ImageButton) findViewById(R.id.btn1);
+        final ImageButton button = (ImageButton) findViewById(R.id.btn1);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "very nice", Toast.LENGTH_SHORT).show();
-                progbar.setProgress(0);
-                countdowntimer.start();
+                cptBtn1++;
+                if (cptBtn1 % 2 == 0) {
+                    button.setBackgroundResource(R.drawable.darkredbutton);
+                    btn1onoff = false;
+                } else {
+                    button.setBackgroundResource(R.drawable.redbutton);
+                    btn1onoff = true;
+                }
+                if(epreuveChoisi == 1) {
+                    countdowntimer.cancel();
+                    progbar.setProgress(0);
+                    countdowntimer.start();
+                }
             }
         });
 
@@ -62,8 +86,53 @@ public class MainActivity extends AppCompatActivity {
                 cptBtn2++;
                 if (cptBtn2 % 2 == 0) {
                     button2.setBackgroundResource(R.drawable.darkredbutton);
+                    boolean btn2onoff = false;
                 } else {
                     button2.setBackgroundResource(R.drawable.redbutton);
+                    boolean btn2onoff = true;
+                }
+                if(epreuveChoisi == 2) {
+                    countdowntimer.cancel();
+                    progbar.setProgress(0);
+                    countdowntimer.start();
+                }
+            }
+        });
+
+        final ImageButton button3 = (ImageButton) findViewById(R.id.btn3);
+        button3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+                cptBtn3++;
+                if (cptBtn3 % 2 == 0) {
+                    button3.setBackgroundResource(R.drawable.interupteurresverse);
+                    boolean btn3onoff = false;
+                } else {
+                    button3.setBackgroundResource(R.drawable.interupteur);
+                    boolean btn3onoff = true;
+                }
+                if(epreuveChoisi == 2) {
+                    countdowntimer.cancel();
+                    progbar.setProgress(0);
+                    countdowntimer.start();
+                }
+            }
+        });
+
+        final ImageButton button4 = (ImageButton) findViewById(R.id.btn4);
+        button4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v){
+                cptBtn4++;
+                if (cptBtn4 % 2 == 0) {
+                    button4.setBackgroundResource(R.drawable.interupteur);
+                    boolean btn4onoff = true;
+                } else {
+                    button4.setBackgroundResource(R.drawable.interupteurresverse);
+                    boolean btn4onoff = false;
+                }
+                if(epreuveChoisi == 2) {
+                    countdowntimer.cancel();
+                    progbar.setProgress(0);
+                    countdowntimer.start();
                 }
             }
         });
