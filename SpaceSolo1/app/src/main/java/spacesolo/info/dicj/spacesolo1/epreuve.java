@@ -15,8 +15,6 @@ public class epreuve {
         switch (rndEpreuve)
         {
             case 1: epreuveChoisi = 1;
-                if(MainActivity.)
-                Toast.makeText(Context context, "")
                 break;
             case 2: epreuveChoisi = 2;
                 break;

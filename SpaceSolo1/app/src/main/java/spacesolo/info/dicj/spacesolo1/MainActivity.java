@@ -1,6 +1,9 @@
 package spacesolo.info.dicj.spacesolo1;
 
+import android.content.Context;
 import android.graphics.drawable.Drawable;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -27,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean btn1onoff = false;
     int epreuveChoisi = 0;
     Random rndEpreuve = new Random();
+    private SensorManager mSensorManager;
+    private Sensor mAccelerometer;
+    private ShakeDetector mShakeDetector;
 
 
     /**
@@ -60,6 +66,25 @@ public class MainActivity extends AppCompatActivity {
             }
         }.start();
 
+
+        /*Use the shake in the phone*/
+        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        mAccelerometer = mSensorManager
+                .getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        mShakeDetector = new ShakeDetector();
+        mShakeDetector.setOnShakeListener(new ShakeDetector.OnShakeListener() {
+
+            @Override
+            public void onShake(int count) {
+                Toast.makeText(MainActivity.this, "epreuve 5", Toast.LENGTH_SHORT).show();
+                countdowntimer.cancel();
+                progbar.setProgress(0);
+                countdowntimer.start();
+                if(epreuveChoisi == 5) {
+                    Toast.makeText(MainActivity.this, "epreuve 5", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         final ImageButton button = (ImageButton) findViewById(R.id.btn1);
         button.setOnClickListener(new View.OnClickListener() {
