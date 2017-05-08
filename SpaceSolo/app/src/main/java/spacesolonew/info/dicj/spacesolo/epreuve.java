@@ -1,4 +1,5 @@
-package spacesolo.info.dicj.spacesolo1;
+package spacesolonew.info.dicj.spacesolo;
+import java.util.Random;
 
 import android.content.Context;
 import android.widget.Toast;
@@ -12,7 +13,7 @@ public class epreuve {
 
     static public int choixEpreuve() {
         Random rndEpreuve = new Random();
-        int rndEp = rndEpreuve.nextInt(4)+1;
+        int rndEp = rndEpreuve.nextInt(5)+1;
         int epreuveChoisi = 0;
 
         switch (rndEp)

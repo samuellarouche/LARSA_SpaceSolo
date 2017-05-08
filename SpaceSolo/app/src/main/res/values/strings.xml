@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SpaceSolo1</string>
+    <string name="hyperspace">Hyper Espace</string>
+    <string name="IDK">\????????</string>
+    <string name="yes">OUI</string>
+    <string name="no">NON</string>
+    <string name="rejouer">Voulez-vous rejouer?</string>
+    <string name="droite">Esquive a droite</string>
+    <string name="gauche">Esquive a gauche</string>
+    <string name="finparti">\nLa parti est terminé. \nVotre score est : </string>
+</resources>
